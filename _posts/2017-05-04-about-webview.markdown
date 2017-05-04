@@ -10,7 +10,6 @@ catalog:    true
 tags:
     - android
     - webview
-    - PWA
 ---
 
 # WebView 篇
