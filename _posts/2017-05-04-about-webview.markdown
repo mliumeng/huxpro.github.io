@@ -15,6 +15,7 @@ tags:
 
 # WebView 篇
 > webView 使用总结。常用的控件却总是记不住使用方法。每次上网找代码。因为使用的简单所以总是容易忽略，在此记录
+
 ## 一、 webview 基础用法：
 > 我认为以下三点最为常用，可应付一般场景
 
@@ -23,8 +24,9 @@ tags:
     <li> 加载网址</li>
     <li> 加载本地html</li>
     <li> 不跳转系统浏览器</li>
-</ol>
+</ul>
 </b>
+
 ### 加载网址
 
 ```java
@@ -34,6 +36,7 @@ webview.load(url);
 ```
 
 ### 加载本地HTML
+
 ```java
 String data = "<html>
                     <body>
