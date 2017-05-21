@@ -1,3 +1,5 @@
+> **ReadMe 文件不做修改，大家可直接访问本主题原作者的博客**
+> 不过我也想要个start
 # Hux blog 模板
 
 ### [我的博客在这里 &rarr;](http://huxpro.github.io)

@@ -1,6 +1,9 @@
-#Hux Blog
+> **ReadMe 文件不做修改，大家可直接访问本主题原作者的博客**
+> 不过我也想要个start
 
-###[View Live Hux Blog &rarr;](https://huangxuan.me)
+# Hux Blog
+
+### [View Live Hux Blog &rarr;](https://huangxuan.me)
 
 ![](http://huangxuan.me/img/blog-desktop.jpg)
 

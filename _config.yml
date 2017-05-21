@@ -1,6 +1,6 @@
 # Site settings
-title: Liumeng Blog
-SEOTitle: 刘蒙的博客 | Liumeng Blog
+title: LM Blog
+SEOTitle: LM Blog
 header-img: img/home-bg.jpg
 email: liuimengchn@gmail.com
 description: "编程无止境"
@@ -70,7 +70,7 @@ duoshuo_share: true                     # set to false if you want to use Commen
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "写写代码，做做设计，<br>离开世界之前，一切都是过程"
+sidebar-about-description: "写写代码，做做设计，<br>离开世界之前，一切都是回忆"
 sidebar-avatar: /img/avatar-lium.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
