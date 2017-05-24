@@ -31,12 +31,17 @@ tags:
         <td>加载网页</td>
         <td>1.加载URL 2.加载本地HTML</td>
     </tr>
-        <tr>
+    <tr>
         <td>获取网页信息</td>
         <td>获取title favicon video image 等资源</td>
-    </tr>    <tr>
+    </tr>  
+    <tr>
         <td>植入js</td>
         <td>控制网页：去掉title 去掉广告等等</td>
+    </tr>
+    <tr>
+        <td>其他</td>
+        <td>更新中...</td>
     </tr>
 </table>
 </center>   
@@ -141,3 +146,45 @@ webview.setWebViewClient(new MyWebViewClient());// 设置webViewClient 重写sho
     <li>video</li> 
     <li>image</li>
 </ul>
+```java
+
+    /**
+     * webview所加载的资源：图片、视频以及js等等
+     * 可根据URL判断出webview加载的资源类型以及连接
+     */
+    @Override
+    public void onLoadResource(WebView view, String url) {
+    /*比如获取网页内的图片资源 (因为我记不住API所以我说这是↓伪代码)*/
+        if(url.endwith(".png")){
+            imgUrlList.add(url);
+        }
+         super.onLoadResource(view, url);
+    }
+```
+### 2.2 植入JS
+> 我并不精通JavaScript，看官可忽略我可能显得拙劣的方法
+
+最简单的，弹一个alert出来,在合适的地方调用这个方法就行了。比如onpagestart onpagefinish 都可以
+<br>小试牛刀？
+```java
+ webview.loadUrl("JavaScript:function showAlert(){alert('halo')}showAlert();");
+```
+这就是很牛逼的注入js ？ <br>我们可以使用这个做很多很多事情在页面上，比如，我们抓取别人的页面，我们只想要内容不想要广告和title以及其他乱七八糟的东西。我们就可以注入js隐藏或者删除这些元素。（有木有更好的方法?），加入我们抓了一篇网易的新闻<center>
+<br>
+<img src="../img/article/webview_title.png">
+<br>title<br>
+<img src="../img/article/webview_footer.jpg">
+<br>footer<br>
+我们需要掐头去尾，只拿我们想要的东西。执行下面这段js就能隐藏头尾
+</center>
+JavaScript代码：
+```javaScript
+<script>
+document.querySelector('.topbar').style.display='none';
+document.querySelector('.footer').style.display='none';
+</script>
+```
+webView注入：
+```java
+ webview.loadUrl("JavaScript:function hide(){document.querySelector('.topbar').style.display='none';document.querySelector('.footer').style.display='none';}hide()");
+```
