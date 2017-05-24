@@ -171,9 +171,9 @@ webview.setWebViewClient(new MyWebViewClient());// 设置webViewClient 重写sho
 ```
 这就是很牛逼的注入js ？ <br>我们可以使用这个做很多很多事情在页面上，比如，我们抓取别人的页面，我们只想要内容不想要广告和title以及其他乱七八糟的东西。我们就可以注入js隐藏或者删除这些元素。（有木有更好的方法?），加入我们抓了一篇网易的新闻<center>
 <br>
-<img src="../img/article/webview_title.png">
+<img src="https://raw.githubusercontent.com/mliumeng/mliumeng.github.io/master/img/article/webview_title.png">
 <br>title<br>
-<img src="../img/article/webview_footer.jpg">
+<img src="https://raw.githubusercontent.com/mliumeng/mliumeng.github.io/master/img/article/webview_footer.jpg">
 <br>footer<br>
 我们需要掐头去尾，只拿我们想要的东西。执行下面这段js就能隐藏头尾
 </center>
