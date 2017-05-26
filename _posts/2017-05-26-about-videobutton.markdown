@@ -4,7 +4,7 @@ title:      "VideoButton 排版"
 subtitle:   "地标最强排版方法。麻麻再也不担心我的radiobutton排版问题了"
 date:       2017-05-26 10:40:00
 author:     "刘蒙"
-header-img: "img/kotlin_header.jpg"
+header-img: "img/radiobutton_header.jpg"
 header-mask: 0.3
 catalog:    true
 tags:
