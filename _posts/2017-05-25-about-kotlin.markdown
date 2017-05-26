@@ -4,7 +4,7 @@ title:      "Kotlin For Android整理"
 subtitle:   "最近Kotlin火的一塌糊涂，在此整理一些教程讲解，帮助我和你入门。"
 date:       2017-05-25 10:40:00
 author:     "刘蒙"
-header-img: "img/kotlin_header.png"
+header-img: "img/kotlin_header.jpg"
 header-mask: 0.3
 catalog:    true
 tags:
