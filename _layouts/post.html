@@ -12,7 +12,6 @@ layout: default
         position: relative;
         background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')
     }
-
     {% if page.header-mask %}
     header.intro-header .header-mask{
         width: 100%;
@@ -58,7 +57,7 @@ layout: default
                 col-md-10 col-md-offset-1
                 post-container">
 
-				{{ content }}
+                {{ content }}
 
                 <hr style="visibility: hidden;">
 
@@ -176,14 +175,14 @@ layout: default
                     <hr class="hidden-sm hidden-xs">
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
-        				{% for tag in site.tags %}
+                        {% for tag in site.tags %}
                             {% if tag[1].size > {{site.featured-condition-size}} %}
-                				<a href="/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
+                                <a href="/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
                                     {{ tag[0] }}
                                 </a>
                             {% endif %}
-        				{% endfor %}
-        			</div>
+                        {% endfor %}
+                    </div>
                 </section>
                 {% endif %}
 
@@ -203,12 +202,11 @@ layout: default
 </article>
 
 
- 
+{% if site.duoshuo_username %}
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <!-- <script type="text/javascript">
     // dynamic User by Hux
     var _user = '{{site.duoshuo_username}}';
-
     // duoshuo comment query.
     var duoshuoQuery = {short_name: _user };
     (function() {
@@ -222,16 +220,13 @@ layout: default
 </script>
 多说公共JS代码 end
 {% endif %}
-
-
 {% if site.disqus_username %}
-<!--disqus 公共JS代码 start (一个网页只需插入一次)
+disqus 公共JS代码 start (一个网页只需插入一次)
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "{{site.disqus_username}}";
     var disqus_identifier = "{{page.id}}";
     var disqus_url = "{{site.url}}{{page.url}}";
-
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
@@ -239,7 +234,7 @@ layout: default
     })();
 </script> -->
 <!-- disqus 公共JS代码 end -->
-
+{% endif %}
 <!-- 网易云跟帖
 <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
