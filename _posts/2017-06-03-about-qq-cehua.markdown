@@ -4,7 +4,6 @@ title:      "仿QQ侧拉菜单笔记"
 subtitle:   "回忆篇 来自2015-09-23 15:24。感谢当年的努力，继续努力一定会有质的飞跃"
 date:       2017-06-03 9:14:00
 author:     "刘蒙"
-header-img: "img/button_header.jpg"
 header-mask: 0.3
 catalog:    true
 tags:
