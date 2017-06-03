@@ -35,7 +35,7 @@ tags:
 前两种没啥说的，网上都是说的这两种，只是形式不同。
 **这里只记录我的方法**
 
-- 第一步：负值radiogroup源码到到你新建的类里面
+- 第一步：复制radiogroup源码到到你新建的类里面
 - 第二步：radiogroup继承与Linerlayout改成RelativeLayout
 - 第三步：将报错的相关部分删掉，将setOnCheckedChangeWidgetListener替换成setOnCheckedChangeListener
 最后：拿去尽情的布局吧

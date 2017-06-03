@@ -93,4 +93,4 @@ public class DownLoadBroadcastReceiver extends BroadcastReceiver {
 ```
 
 
-> 完成 Thank you . 谢谢
+> 完成 Thank you 
