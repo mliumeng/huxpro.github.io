@@ -16,7 +16,7 @@ tags:
 > 本篇迁移自我的CSDN   
 > 本篇持续在此更新...
 
-#开始之前
+# 开始之前
 > 朋友分享了一个GitHub上关于Android UI控件的集合站点。无比的炫酷与精彩。于是我决定对其进行一一剖析。目的，学习人家的技术。同时在此分享，记录
 > 在此，坑已挖好。不管花费多少时间，希望我能坚持到最后
 > 
@@ -28,7 +28,7 @@ tags:
 - 希望你们静下来慢慢看，内容有些漫长
 
 ---
-##剖析内容
+## 剖析内容
 >- 这篇内容为Nice UI开篇之作。按照GitHub上面的顺序，我们首先讲解的是
 [Material Design Android Library](https://github.com/navasmdc/MaterialDesignLibrary) 
 
@@ -36,7 +36,7 @@ Material Design 是专为设计适用于多个平台和设备的视觉、运动�
 
 ![Material Design](https://raw.githubusercontent.com/navasmdc/MaterialDesignLibrary/master/images/logo.png)
 
-###1.Button
+### 1.Button
 
 |  Flat Button |Rectangle Button |Small Float Button|  Icon Button |Float Button   |
 | :------------: | :------------: |:------------:| :------------: | :------------: |
@@ -44,7 +44,7 @@ Material Design 是专为设计适用于多个平台和设备的视觉、运动�
 
 
 ---
->Material Design 里面按钮一般 有以上几种形式。下面我们来看看他是怎么定义这几个按钮的。
+> Material Design 里面按钮一般 有以上几种形式。下面我们来看看他是怎么定义这几个按钮的。
 
 ![button](http://img.blog.csdn.net/20170119172400740?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbF9pdW1lbmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 <p style="color:#ff0000;">根据源码：所有的以上5中按钮都是继承与Button，而Button继承于CustomView,然后几乎所有的控件都继承与CustomView 如图↓</p>
@@ -53,7 +53,7 @@ Material Design 是专为设计适用于多个平台和设备的视觉、运动�
 所以在剖析Button之前，首先要看一下CustomView，CustomeView是继承与RelativeLayout。往下看源码↓
 
 -  **CustomeView**
-```
+```java
 package com.gc.materialdesign.views;
 
 import android.content.Context;
@@ -114,7 +114,7 @@ public class CustomView extends RelativeLayout{
 这段代码很简单，仅仅是规定了一些基础的状态。因为都是继承与RelativeLayout 所以我们在setEnable()的时候背景颜色不会发生改变，所以在CustomView 里我们对setEnable()进行处理。setEnable的同时改变其背景颜色。同时对动画的绘制进行状态控制。简单讲完CustomView再开始剖析Button
 
 - **Button 关键代码 （一） 记录坐标以及状态**
-```
+```java
 
  /**
   * onTouchEvent
@@ -217,9 +217,9 @@ public class CustomView extends RelativeLayout{
 
     
  
- 
  至此，所有button的基类Button就这么几个关键点，切通俗易懂。不再赘述
-#### **Flat Button**    
+
+### Flat Button    
 首先我们来实现第一个button ![Flat Button](https://raw.githubusercontent.com/navasmdc/MaterialDesignLibrary/master/images/flat_button.png)← 就是这个button
 1. 关键代码 onDraw()
  > onDraw() 的逻辑其实很简单 就是不断的
@@ -247,7 +247,7 @@ public class CustomView extends RelativeLayout{
         }
     }
 ```
-###**Rectangle Button**
+### Rectangle Button
 > 发现Rectangle Button 与 Flat Button 除了background不同之外没有其他的不同。主要是背景加了阴影
 
 1. RectangleButton 设置阴影关键代
@@ -293,5 +293,5 @@ public class CustomView extends RelativeLayout{
 
  
 
-
+> 持续更新。。。
 

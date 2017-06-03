@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "DownloadManager 下载完成并安装*"
+title:      "DownloadManager 下载完成并安装"
 subtitle:   "DownloadManager 是Android系统提供的一个很好用的下载类。通过此类可以很方便的下载文件并在通知栏显示进度，不用再重写通知栏。所以记录一下使用方法与一些技巧。望批判"
 date:       2017-05-29 09:40:00
 author:     "刘蒙"
@@ -12,18 +12,16 @@ tags:
     - button
     - Material
 ---
-> 本篇迁移自CSDN <a href = 'http://blog.csdn.net/l_iumeng/article/details/51743123' target="_bliak">http://blog.csdn.net/l_iumeng/article/adetails/51743123</a> 
-> 
-> 本篇持续在此更新...
+> 本篇迁移自我的CSDN 
 
-##**DownloadManager 下载完成并安装**
+## DownloadManager 下载完成并安装
 ---
 > **话说blog还是要坚持写的。仅仅是一个态度的问题 .......**
  >>DownloadManager 是Android系统提供的一个很好用的下载类。通过此类可以很方便的下载文件并在通知栏显示进度，不用再重写通知栏。所以记录一下使用方法与一些技巧。望批判。将简单的下载执行的更简单！
 
-####**直接上代码吧**
+### 直接上代码吧
 
-```
+```java
 public void download(String downloadUrl) {
 		DownloadManager manager = (DownloadManager) mContext
 				.getSystemService(Context.DOWNLOAD_SERVICE);
@@ -46,9 +44,9 @@ public void download(String downloadUrl) {
 ```
 > 获取并保存此次下载ID为了方便监听下载完成，并处理相关下载后的事情，比如下载一个app，为了提高用户体验就要自动弹出安装界面。这时候我们就要进行下载监听
 
-DownLoadBroadcastReceiver.java
+`DownLoadBroadcastReceiver.java`
 
-```
+```java
 package com.android.browser;
 
 import android.annotation.SuppressLint;
@@ -95,4 +93,4 @@ public class DownLoadBroadcastReceiver extends BroadcastReceiver {
 ```
 
 
->>>>完成 Thank you . 谢谢
+> 完成 Thank you . 谢谢

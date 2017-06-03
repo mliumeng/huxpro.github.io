@@ -13,7 +13,7 @@ tags:
 ---
 > 此篇从我的简书迁移过来。
 
-#记录项目中遇到的问题
+# 记录项目中遇到的问题
 > 今天项目遇到这样一个需求：radiobutton 排版为2行2列，然而radiogroup继承自 LinearLayout 原始的控件仅支持水平排列，或垂直排列。然而这并不能满足需求。于是在网上找了大量的例子。最终还是用自己方法实现了需求。
 在此记录**不要直接看代码**
 
@@ -22,11 +22,11 @@ tags:
 
 ![预览图.png](http://upload-images.jianshu.io/upload_images/2820692-a3c244d148d7a08d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-##网上的方法（弱爆了的方法）
+## 网上的方法（弱爆了的方法）
 * 1、通过设置readiobutton 的margin值为负值来进行排版
 * 2、通过自定义radiogroup 重点重写addView 从viewGroup里面直接取出里面的radiobutton
 
-##我的方法最diao（地表最强）
+## 我的方法最diao（地表最强）
 * ** 我觉得最简单，直接让RadioGroup继承RelativeLayout,一本万利。想怎么布局就怎么布局 [傲娇脸]**
 
 原文地址：[首发自简书](http://www.jianshu.com/p/5de08d69c02e)
@@ -400,9 +400,9 @@ public class LiumRadioGroup extends RelativeLayout {
     }
 }
 
- ```
+```
 
-布局文件展示？
+**布局文件展示？**
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -449,4 +449,5 @@ public class LiumRadioGroup extends RelativeLayout {
 
 </LinearLayout>
 ```
->欢迎转载,注明出处（不知道有啥用，但是人家都这么说了）http://www.jianshu.com/p/5de08d69c02e
+
+> 欢迎转载,注明出处（不知道有啥用，但是人家都这么说了）http://www.jianshu.com/p/5de08d69c02e
