@@ -40,6 +40,10 @@ tags:
         <td>控制网页：去掉title 去掉广告等等</td>
     </tr>
     <tr>
+        <td>java js交互</td>
+        <td>混合开发必备知识...</td>
+    </tr>
+    <tr>
         <td>其他</td>
         <td>更新中...</td>
     </tr>
@@ -188,3 +192,10 @@ webView注入：
 ```java
  webview.loadUrl("JavaScript:function hide(){document.querySelector('.topbar').style.display='none';document.querySelector('.footer').style.display='none';}hide()");
 ```
+## 三、 javaScript 和 java 交互
+这个浮躁的互联网年代，一切都讲究速度。想在这年代分一杯羹，必须快速快速快速的抢占市场。快速占领市场就必须要快速的开发与部署。因此**混合开发**就诞生了。混合开发的关键就是js月本地的交互
+
+**交互大概有这几种**
+
+- Android(java) 调用 html的代码
+- HTML中js调用Android（Java）代码

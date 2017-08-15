@@ -1,0 +1,24 @@
+# Lopscoop架构
+Lopscoop 重构准备
+## 业务
+
+--|content 
+	--|normal 
+	--|video
+	--|quizzes
+	--|...(more)
+--|me
+	--|login 
+	--|register
+	--|find
+	--|points 
+		--|task
+		--|downline
+		--|record
+		--|withdrawal
+	--|setting
+	--
+
+
+
+
