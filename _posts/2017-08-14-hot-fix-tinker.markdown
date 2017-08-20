@@ -87,10 +87,10 @@ tags:
 
 ## 先说Tinker
 它的名字来至 Dota 中的地精修补匠，我们希望发版本可以像它一样做到无限刷新。
-![Cartoon Tinker](../img/article/hotfix/cartoon_tinker.jpg)
+![Cartoon Tinker](https://github.com/mliumeng/mliumeng.github.io/blob/master/img/article/hotfix/cartoon_tinker.jpg)
 Tinker 的方案来源 gradle 编译的 instant run 与 buck 编译的 exopackage . 他们的思想都是**替换新的Dex** . 即我们使用了新的 Dex ，那样既不出现 Art 地址错乱问题，在 Dalvik 也无需插桩。
 但是 instant run 是针对编译期，他可以将最后生成的所有变化直接考到手机端。对于线上方案，不可行。
-![Tinker](../img/article/hotfix/icon_tinker.jpg)
+![Tinker](https://github.com/mliumeng/mliumeng.github.io/blob/master/img/article/hotfix/icon_tinker.jpg)
  [Tinker 接入指南](https://github.com/Tencent/tinker/wiki/Tinker-接入指南)
 大致是如图几种方案，而 Tinker 采用的是腾讯自己搞的算法 DexDiff 。
  [DexDiff 算法详解](https://www.zybuluo.com/dodola/note/554061) 这篇文章写得很详细。
