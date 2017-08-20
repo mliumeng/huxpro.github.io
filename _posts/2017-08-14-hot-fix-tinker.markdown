@@ -27,11 +27,11 @@ tags:
 
 正儿八经的讲，热修复必将是一个程序员的基础本领。产品对用户体验越来越重视。包括我们用户对产品的体验要求也是越来越高。
 
-- 从修复 BUG 的层面讲
+## 从修复 BUG 的层面讲
 
 尽管我们开发者认真细致长得帅，但也不能保证百分之百没有 BUG 。尽管上线前我们的测试组认真负责的反复测试，却总难以揣测千万用户的逻辑。所以 BUG 真的会在上线的版本上出现。这就不可避免的影响到了一部分用户的使用体验。产品，研发，测试以及公司的每一个人都不愿看到用户抱怨的。所以：**热修复很重要**热修复就能避免了上线后遇到 BUG 不能及时修复的尴尬。
 
-- 从产品新需求的层面
+## 从产品新需求的层面
 
 产品有了新需求，正常的流程评测 - 开发 - 测试 - 上线 - 得到数据模型 - 精准评估 - 发现不如不上 - 下一版本去掉- ----- 漫长的流程中终于去掉了。
 而我们有了热修，本着对用户负责的态度我们这些流程其实并不能少，但是我们可以灰度下发，得到数据模型 - 精准评估 决定下一版本是否正式加入。能节省 6 - 30 天的时间。
@@ -87,17 +87,17 @@ tags:
 
 ## 先说Tinker
 它的名字来至 Dota 中的地精修补匠，我们希望发版本可以像它一样做到无限刷新。
-![Cartoon Tinker][cartoonTinker]
+![Cartoon Tinker](../img/article/hotfix/cartoon_tinker.jpg)
 Tinker 的方案来源 gradle 编译的 instant run 与 buck 编译的 exopackage . 他们的思想都是**替换新的Dex** . 即我们使用了新的 Dex ，那样既不出现 Art 地址错乱问题，在 Dalvik 也无需插桩。
 但是 instant run 是针对编译期，他可以将最后生成的所有变化直接考到手机端。对于线上方案，不可行。
-![Tinker][iconTinker]
- [Tinker 接入指南][Tinker-接入指南]
+![Tinker](../img/article/hotfix/icon_tinker.jpg)
+ [Tinker 接入指南](https://github.com/Tencent/tinker/wiki/Tinker-接入指南)
 大致是如图几种方案，而 Tinker 采用的是腾讯自己搞的算法 DexDiff 。
- [DexDiff 算法详解][DexDiff 算法详解] 这篇文章写得很详细。
+ [DexDiff 算法详解](https://www.zybuluo.com/dodola/note/554061) 这篇文章写得很详细。
 
 ## 阿里云的HotFix（Sophix）
-[HotFix2.0（Sophix） 接入指南] [hotfix-接入指南] 详细的接入文档
-[HotFix（Sophix） 原理][hotfix-原理] 
+[HotFix2.0（Sophix） 接入指南](https://help.aliyun.com/document_detail/53240.html) 详细的接入文档
+[HotFix（Sophix） 原理](https://yq.aliyun.com/articles/103527)
 
 # 未来
 
@@ -107,11 +107,4 @@ Tinker 的方案来源 gradle 编译的 instant run 与 buck 编译的 exopackag
 我们对于未来是很乐观的，Android的热修复领域不仅不会受到封杀，反而还有很大的发展空间。我们正在尝试支持各大加固厂商，目前阿里聚安全修复已经支持了Sophix，热修复结合安全加固，将会使得app的稳定性和安全性更加坚不可摧。甚至后续还可以与系统厂商合作，对系统app乃至系统组件进行修复，这样就可以避免频繁OTA升级。
 
 因此，热修复所能发挥是价值将是十分巨大的。热修复还可以与其他领域进行碰撞，引发无限的可能性。在这里，我们欢迎所有应用厂商以及ROM厂商与我们合作，共同使得Android的生态更加完善。 **”**
-
-
-[cartoonTinker]: ../img/article/hotfix/cartoon_tinker.jpg ""
-[iconTinker]: ../img/article/hotfix/icon_tinker.jpg ""
-[Tinker-接入指南]: https://github.com/Tencent/tinker/wiki/Tinker-接入指南 "Tinker-接入指南"
-[DexDiff 算法详解]: https://www.zybuluo.com/dodola/note/554061 "DexDiff 算法详解"
-[hotfix-接入指南]:https://help.aliyun.com/document_detail/53240.html
-[hotfix-原理]:https://yq.aliyun.com/articles/103527
+ 
